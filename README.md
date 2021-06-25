@@ -4,3 +4,10 @@ Your team has been hired by the owner of a small hardware store - Nuts and Bolts
 ## Subheader
 
 test 1
+
+## Sprint 1
+Stories:
+    1. Website Home Page
+    2. Website Contact Us
+    3. Website FAQ Page
+    4. Website Product Pages
