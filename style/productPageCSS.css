@@ -1,0 +1,29 @@
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 12;
+  font-family: Arial;
+  background-color: grey;
+}
+nav {
+  color: black;
+  margin-left: 30px;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 30px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+</style>
