@@ -2,15 +2,15 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 12;
   font-family: Arial;
   background-color: grey;
 }
 nav {
-  color: black;
-  margin-left: 30px;
+  background-color: #000;
+  padding: .5em;
+  width: 100%;
 }
 
 /* The grid: Four equal columns that floats next to each other */
