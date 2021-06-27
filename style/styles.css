@@ -154,6 +154,6 @@ input[type=text], select, textarea {
 	  font-weight: bold;
   }
   .whole-container {
-	  display:flex;
-	  margin-left: 20%;
+	display: flex;
+	justify-content: center;
   }
