@@ -1,13 +1,12 @@
 html {
 	background-image: url(../img/background.jpg);
-	box-shadow:         inset 0 0 10px #000000;
+	box-shadow: inset 0 0 10px #000000;
 	background-color: black;
-	color: #f1e8de;
 	background-size: 100% 100%;
 }
 ::selection {
 	color: #f0ece8;
-	background-color: #ef543f;
+	background-color: #ef543f; 
 }
 body {
 	font-family: 'Fjalla One', sans-serif;
@@ -19,12 +18,15 @@ nav {
 	width: 100%;
 	box-shadow: 0px 20px 60px black;
 	box-shadow: inset 0px 0px 20px 1px #e7c5a6;
+	margin: auto;
+	text-align: center;
 }
 nav a {
 	color: #ef543f;
 	text-decoration: none;
 	padding-left: 40px;
 	padding-right: 40px;
+	font-size: x-large;
 }
 nav a:hover {
 	color: #f0ece8;
@@ -51,106 +53,104 @@ nav ul {
 @media screen and (min-width: 600px) {
 	
 }
-
-input[type=text], select, textarea {
-	width: 100%;
-	padding: 12px;
-	border: 1px solid #ccc;
-	background-color: #f0e2d2;
-	border-radius: 4px;
-	box-sizing: border-box;
-	margin-top: 6px;
-	margin-bottom: 16px;
-	resize: vertical;
-  }
-
+.center-img {
+	/* display:block; */
+	margin-left: 45.3%;
+	margin-top: 30px;
+}
 .container {
-	border-radius: 5px;
-	background-color: #f0ece8;
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 5px;
-	padding-bottom: 30px;
-	width: 50%;
-	/* margin: auto; */
-	margin-top: 70px;
-	margin-bottom: 250px;
-	box-shadow: inset 0px 0px 200px 1px #eedfd1;
-	box-shadow: 0px 50px 60px black;
-  }
-
-  input[type=submit] {
-	background-color: #ef543f;
-	color: white;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-  }
-
-  input[type=submit]:hover {
-	background-color: #da341f;
-  }
-
-  h1 {
-	  text-align: center;
-  }
-
-  h2 {
-	  color: black;
-	  text-align: center;
-  }
-
-  h3 {
-	  text-align: center;
-  }
-
-  .container h3 {
-	  color: black;
-	  padding-bottom: 30px;
-	  margin-top: -30px;
-	  line-height:1.8;
-  }
-
-  .container h2 {
-	  font-size: 60px;
-  }
-
-  label {
-	  font-weight: bold;
-	  color: black;
-  }
-
-  h1 img {
-	  margin-right: -60px;
-	  margin-top: 30px;
-  }
-  .second-container {
+	margin: auto;
+	margin-top: 30px;
+	padding: 4rem;
+	width: 48rem;
 	border-style: solid;
 	background-color: #f0ece8;
+	border-color: #f0ece8;
 	border-width: 5px;
 	border-radius: 5px;
-	width: 400px;
-	margin-top: 70px;
-	margin-left: 70px;
-	height: 550px;
-	box-shadow: inset 0px 0px 200px 1px #eedfd1;
-	box-shadow: 0px 50px 60px black;
   }
-  .second-container h2 {
-	  text-align: center;
-	  color: black;
-	  font-size: 50px;
+  h3 {
+	font-size: 1.75rem;
+	color: #373d51;
+	padding: 1.3rem;
+	margin: 0;
   }
-  .second-container p {
-	  text-align:center;
-	  color: #ef543f;
-	  word-spacing: 15px;
-	  line-height: 1.5;
-	  font-size: 20px;
-	  font-weight: bold;
-  }
-  .whole-container {
+  .accordion a {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	
+	flex-direction: column;
+	width: 100%;
+	padding: 1rem 3rem 1rem 1rem;
+	color: #7288a2;
+	font-size: 1.15rem;
+	font-weight: 400;
+	border-bottom: 1px solid #e5e5e5;
+  }
+  .accordion a:hover,
+  .accordion a:hover::after {
+	cursor: pointer;
+	color: #ff5353;
+  }
+  .accordion a:hover::after {
+	border: 1px solid #ff5353;
+  }
+  .accordion a.active {
+	color: #ff5353;
+	border-bottom: 1px solid #ff5353;
+  }
+  .accordion a::after {
+	font-family: 'Ionicons';
+	content: '\f218';
+	position: absolute;
+	float: right;
+	right: 1rem;
+	font-size: 1rem;
+	color: #7288a2;
+	padding: 5px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 1px solid #7288a2;
+	text-align: center;
+  }
+  .accordion a.active::after {
+	font-family: 'Ionicons';
+	content: '\f209';
+	color: #ff5353;
+	border: 1px solid #ff5353;
+  }
+  .accordion .content {
+	opacity: 0;
+	padding: 0 1rem;
+	max-height: 0;
+	border-bottom: 1px solid #e5e5e5;
+	overflow: hidden;
+	clear: both;
+	transition: all 0.2s ease 0.15s;
+  }
+  .accordion .content p {
+	font-size: 1rem;
+	font-weight: 300;
+  }
+  .accordion .content.active {
+	opacity: 1;
+	padding: 1rem;
+	max-height: 100%;
+	transition: all 0.35s ease 0.15s;
+  }
+  h4 {
+	font-size: 1.75rem;
+	color: #373d51;
+	padding: 1.3rem;
+	margin: 0;
+  }
+  h5{
+	font-size: 1.75rem;
+	color: #373d51;
+	padding: 1.3rem;
+	margin: 0;
   }

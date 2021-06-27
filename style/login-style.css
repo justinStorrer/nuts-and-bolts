@@ -25,6 +25,7 @@ nav a {
 	text-decoration: none;
 	padding-left: 40px;
 	padding-right: 40px;
+	font-size: x-large;
 }
 nav a:hover {
 	color: #f0ece8;
