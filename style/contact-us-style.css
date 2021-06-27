@@ -36,9 +36,6 @@ nav a:active {
 nav a::selection {
 	color: black;
 }
-nav a:link {
-	color: #ef543f;
-}
 nav ul {
 	margin: 0;
     padding: 0;
