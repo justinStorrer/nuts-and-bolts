@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 	<link rel="stylesheet" href="../style/f&q-style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +25,8 @@
 	<a href="">SEARCH</a>
 </nav>
 <div class = "container">
-	<h1> Frequently Asked Qustions(FAQ)</h2>
-	<h2>Orders</h3>
+	<h1> Frequently Asked Questions(FAQ)</h2>
+	<h4>Orders</h4>
 	<div class="accordion">
 		<div class="accordion-item">
 		  <a>How do i check my order status?</a>
@@ -50,7 +51,7 @@
 		  <div class="content">
 			<p>Yes we have curbside pick up all you have to do is order and chose pick up.  </p>
 		  </div>
-	<h3>products</h4>
+	<h4>Products</h4>
 		  <div class="accordion">
 		<div class="accordion-item">
 		  <a>How do i find products online?</a>
@@ -75,7 +76,7 @@
 		  <div class="content">
 			<p>Yes we provide rent and all you have to do is log into your nuts and bolts. </p>
 		  </div>
-	 <h4>Credit Account</h5>
+	 <h4>Credit Account</h4>
 		  <div class="accordion">
 		<div class="accordion-item">
 		  <a>How do i apply for the store credit card?</a>
@@ -102,7 +103,7 @@
 			<p>We offer 90 same as cash on all with Nuts and Bolts credit card purchase. </p>
 			<p>Your first payment will be due 90 days from your initial purchase.</p>
 		  </div>
-	 <h5>Policy</h6>
+	 <h4>Policy Statement</h4>
 		  <div class="accordion">
 		<div class="accordion-item">
 		  <a>What is the stores return policy?</a>
@@ -135,5 +136,16 @@
 		  </div>
 		  
 	</div>
+
+	<script>
+	const items = document.querySelectorAll(".accordion a");
+	
+	function toggleAccordion(){
+	this.classList.toggle('active');
+	this.nextElementSibling.classList.toggle('active');
+	}
+	
+	items.forEach(item => item.addEventListener('click', toggleAccordion));
+	</script>
 </body>
 </html>
