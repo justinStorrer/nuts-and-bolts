@@ -29,11 +29,11 @@ nav a {
 	font-size: x-large;
 }
 nav a:hover {
-	color: #f0ece8;
-	background-color: #ef543f;
+	color: #e67a6b;
+	/* text-shadow: 0px 0px 40px #ecb782; */
 }
 nav a:active {
-	color: black;
+	color: #ef543f;
 }
 nav a::selection {
 	color: black;
@@ -43,12 +43,16 @@ nav ul {
     padding: 0;
     list-style: none;
  }
+ .nav-right a {
+	 float:right;
+	 margin-top: -62px;
+	 padding: 30px;
+ }
 @media screen and (max-width: 480px) {
 	nav a {
 		float: none;
 		width: 100%;
 	}
-	
 }
 @media screen and (min-width: 600px) {
 	
@@ -111,6 +115,9 @@ nav ul {
   }
   .center p {
 	  text-align: center;
+  }
+  .center a {
+	  color: #ef543f;
   }
   .second-container {
 	  margin-top: 100px;

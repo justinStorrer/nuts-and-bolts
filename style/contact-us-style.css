@@ -19,6 +19,8 @@ nav {
 	width: 100%;
 	box-shadow: 0px 20px 60px black;
 	box-shadow: inset 0px 0px 20px 1px #e7c5a6;
+	margin: auto;
+	text-align: center;
 }
 nav a {
 	color: #ef543f;
@@ -28,11 +30,11 @@ nav a {
 	font-size: x-large;
 }
 nav a:hover {
-	color: #f0ece8;
-	background-color: #ef543f;
+	color: #e67a6b;
+	/* text-shadow: 0px 0px 40px #ecb782; */
 }
 nav a:active {
-	color: black;
+	color: #ef543f;
 }
 nav a::selection {
 	color: black;
@@ -41,6 +43,11 @@ nav ul {
 	margin: 0;
     padding: 0;
     list-style: none;
+ }
+ .nav-right a {
+	 float:right;
+	 margin-top: -62px;
+	 padding: 30px;
  }
 @media screen and (max-width: 480px) {
 	nav a {
