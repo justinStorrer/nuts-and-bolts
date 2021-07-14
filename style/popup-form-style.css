@@ -34,7 +34,10 @@ input[type=text], input[type=password] {
   }
 
   .login-form {
-      
+      font-size: 20px;
+	  background-color: #ef543f;
+	  color: #f1e8de;
+	  height: 50px;
   }
   
   /* Extra styles for the cancel button */
@@ -62,6 +65,11 @@ input[type=text], input[type=password] {
   span.psw {
 	float: right;
 	padding-top: 16px;
+	font-size: 20px;
+  }
+
+  span.psw a {
+	  color: #ef543f;
   }
   
   /* The Modal (background) */
@@ -103,7 +111,8 @@ input[type=text], input[type=password] {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 2%;
-	height: 1000px;
+	height: 1300px;
+	/* padding-bottom: 200px; */
   }
   
   /* The Close Button (x) */
@@ -140,5 +149,28 @@ input[type=text], input[type=password] {
 
   .login-alignment {
 	  text-align: center;
-	  
+	  padding-top: 30px;
   }
+
+  .reveal-if-active {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	font-size: 16px;
+	transform: scale(0.8);
+	transition: 0.5s;
+}
+.reveal-if-active label {
+	display: block;
+	margin: 0 0 3px 0;
+}
+.reveal-if-active input[type=text] {
+	width: 100%;
+}
+input[type="radio"]:checked ~ .reveal-if-active, input[type="checkbox"]:checked ~ .reveal-if-active {
+	opacity: 1;
+	max-height: 100px;
+	padding: 10px 20px;
+	transform: scale(1);
+	overflow: visible;
+}
