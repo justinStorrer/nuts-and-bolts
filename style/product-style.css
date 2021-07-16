@@ -48,6 +48,11 @@ nav ul {
 	 margin-top: -62px;
 	 padding: 30px;
  }
+ .nav-right button {
+	float: right;
+	margin-top: -62px;
+	padding: 30px;
+}
 @media screen and (max-width: 480px) {
 	nav a {
 		float: none;
@@ -90,7 +95,7 @@ nav ul {
 	text-align: center;
 	justify-content: center;
 }
-.box img {
+.box img:not(.logo) {
 	padding: 50px;
 	width: 400px;
 	height: 400px;

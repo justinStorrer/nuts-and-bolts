@@ -49,6 +49,11 @@ nav ul {
 	 margin-top: -62px;
 	 padding: 30px;
  }
+.nav-right button {
+	float: right;
+	margin-top: -62px;
+	padding: 30px;
+}
 @media screen and (max-width: 480px) {
 	nav a {
 		float: none;
@@ -64,7 +69,6 @@ input[type=text], select, textarea {
 	width: 100%;
 	padding: 12px;
 	border: 1px solid #ccc;
-	background-color: #f0e2d2;
 	border-radius: 4px;
 	box-sizing: border-box;
 	margin-top: 6px;
@@ -159,4 +163,10 @@ input[type=text], select, textarea {
   .whole-container {
 	display: flex;
 	justify-content: center;
+  }
+  .form-container label:not(.remember-me):not(.yes-or-no):not(.verification) {
+	  font-size: 32px;
+  }
+  .form-container h4 {
+	  color: black;
   }

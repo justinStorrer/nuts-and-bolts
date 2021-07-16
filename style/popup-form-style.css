@@ -66,6 +66,8 @@ input[type=text], input[type=password] {
 	float: right;
 	padding-top: 16px;
 	font-size: 20px;
+	color: black;
+	font-weight: bold;
   }
 
   span.psw a {
@@ -173,4 +175,12 @@ input[type="radio"]:checked ~ .reveal-if-active, input[type="checkbox"]:checked 
 	padding: 10px 20px;
 	transform: scale(1);
 	overflow: visible;
+}
+
+h4 {
+	font-size: 25px;
+}
+
+.yes-or-no {
+	font-size: 20px;
 }

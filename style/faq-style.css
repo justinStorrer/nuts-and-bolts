@@ -48,6 +48,11 @@ nav ul {
 	 margin-top: -62px;
 	 padding: 30px;
  }
+ .nav-right button {
+	float: right;
+	margin-top: -62px;
+	padding: 30px;
+}
 @media screen and (max-width: 480px) {
 	nav a {
 		float: none;
@@ -162,4 +167,7 @@ nav ul {
 	color: #373d51;
 	padding: 1.3rem;
 	margin: 0;
+  }
+  .form-container h4 {
+	  color: black;
   }
