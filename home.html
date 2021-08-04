@@ -13,8 +13,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style/popup-form-style.css">
 </head>
-<style>
-</style>
+
 <body>
 <h1><img src="img/logo.png" title="Logo" alt="Sweet Release Logo" width="300" class="center-img"/><h1>
 <nav>
@@ -23,9 +22,10 @@
 	<a href="pages/faq.html">FAQ</a>
 	<a href="pages/contact-us.html">CONTACT US</a>
 	<a href="pages/search.html">SEARCH</a>
+	<a href="pages/cart.html"><img src="img/shopping-cart-icon.png" title="shopping-cart-icon" alt="Symbol of shopping cart icon" class="shopping-cart-icon"/></a>
 
 	<div class="nav-right">
-		<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">REGISTER</button>
+		<button onclick="document.getElementById('id02').style.display='block'"" style="width:auto;">REGISTER</button>
 		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</button>
 	</div>
 </nav>
@@ -97,26 +97,30 @@
 <!--REGISTER FORM POP-UP-->
 <div id="id02" class="modal">
   
-	<form class="modal-content2 animate" action="/action_page.php" method="post">
+	<form class="modal-content2 animate" action="/register.php" method="post">
 	  <div class="imgcontainer">
 		<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
 		<img src="img/logo.png" alt="Logo" class="logo">
 	  </div>
   
 	  <div class="form-container">
-		<label for="fname"><b>First Name</b></label>
+
+		<label for="uname" class="user-pass"><b>Username</b></label>
+		<input type="text" placeholder="Create Username" name="uname" required></br></br>
+
+		<label for="fname" class="user-pass"><b>First Name</b></label>
 		<input type="text" placeholder="Enter Your First Name" name="fname" required></br></br>
 
-		<label for="lname"><b>Last Name</b></label>
+		<label for="lname" class="user-pass"><b>Last Name</b></label>
 		<input type="text" placeholder="Enter Your Last Name" name="lname" required></br></br>
 
-		<label for="email"><b>Email</b></label>
+		<label for="email" class="user-pass"><b>Email</b></label>
 		<input type="text" placeholder="Enter Email" name="email" required></br></br>
 
-		<label for="uname"><b>Username</b></label>
-		<input type="text" placeholder="Create Username" name="uname" required></br></br>
+		<label for="phone" class="user-pass"><b>Phone Number</b></label>
+		<input type="text" placeholder="Enter Phone Number" name="phone" required></br></br>
   
-		<label for="psw"><b>Password</b></label>
+		<label for="psw" class="user-pass"><b>Password</b></label>
 		<input type="password" placeholder="Create Password" name="psw" required></br></br>
 
 		<h4>Are You an Employee for Nuts & Bolts?</h4>
@@ -131,11 +135,13 @@
 
 		  
 		<div class="login-alignment">
-		  <button class="login-form" type="submit">Register</button>
+		  <button onclick=showAlert() class="login-form" type="submit">Register</button>
 		</div>
 	  </div>
 	</form>
   </div>
+
+  <button onclick="document.getElementById('no')">Register</button>
 
 <!--SCRIPT FOR POP-UP FORM ANIMATION-->
 <script type="text/javascript">
@@ -157,6 +163,14 @@ window.onclick = function(event) {
         modal2.style.display = "none";
     }
 }
+
+function showAlert() {
+    alert ("You're registered!");
+  }
+
+// function myFunction() {
+// 	document.getElementById("demo").
+// }
 </script>
 
 </body>
