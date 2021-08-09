@@ -60,49 +60,17 @@ nav ul {
 	}
 	
 }
-
 .center-img {
 	/* display:block; */
 	margin-left: 45.3%;
 	margin-top: 30px;
 }
-.title-container {
-	border-style: solid;
-	background-color: #f0ece8;
-	border-color: #f0ece8;
-	border-width: 5px;
-	border-radius: 5px;
-	width: 1700px;
+.search {
+	/* display:block; */
+	margin-left: 26.5%;
 	margin-top: 30px;
-	margin-bottom: 200px;
-	margin-left: auto;
-	margin-right: auto;
-	height: 1200px;
-	box-shadow: inset 0px 0px 200px 1px #eedfd1, 0px 50px 60px black;
 }
-.title-container h2 {
-	text-align: center;
-	color: black;
-	font-size: 50px;
-}
-.box {
-	display: flex;
-	flex-wrap: wrap;
-	height: 400px;
-	align-content: space-between;
-	text-align: center;
-	justify-content: center;
-}
-.box img:not(.logo) {
-	padding: 50px;
-	width: 400px;
-	height: 400px;
-}
-.box p {
-	margin-top: -50px;
-	font-size: 20px;
-	font-weight: 550;
-}
+
 .shopping-cart-icon {
 	width: 1.3%;
 }

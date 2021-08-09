@@ -1,4 +1,4 @@
-<!  SEARCH PAGE >
+<! PRODUCT PAGE >
 <! CSCI1145 >
 <! 11-01-2020>
 
@@ -8,17 +8,18 @@
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Nuts & Bolts - Search</title>
-	<link rel="stylesheet" href="../style/login-style.css">
+	<title>Nuts & Bolts - Products</title>
+	<link rel="stylesheet" href="../style/search-style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../style/popup-form-style.css">
 </head>
 
 <?php include 'login.php';?>
 
 <body>
-<h1><img src="../img/logo.png" title="Logo" alt="Sweet Release Logo" width="300"/><h1>
+<h1><img src="../img/logo.png" title="Logo" alt="Sweet Release Logo" width="300" class="center-img"/><h1>
 <nav>
 	<a href="../home.html">HOME</a>
 	<a href="product.html">PRODUCT</a>
@@ -28,11 +29,117 @@
 	<a href="cart.html"><img src="../img/shopping-cart-icon.png" title="shopping-cart-icon" alt="Symbol of shopping cart icon" class="shopping-cart-icon"/></a>
 
 	<div class="nav-right">
-		<a href="register.html">REGISTER</a>
-		<a href="login.html">LOGIN</a>
+		<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">REGISTER</button>
+		<button type="button" onclick="alert('You logged out')">LOGOUT</button>
+		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</button>
 	</div>
 </nav>
-<body>
-	<img src="../img/search-img/search.png" title="search-icon" alt="Search Image Icon"/>
+	<img src="../img/search-img/web-search-4291.png" title="search-icon" alt="Search Image Icon" width=1200px class="search"/>
+
+
+<!--LOGIN FORM POP-UP-->
+<div id="id01" class="modal">
+  
+	<form class="modal-content animate" action="/action_page.php" method="post">
+	  <div class="imgcontainer">
+		<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+		<img src="../img/logo.png" alt="Logo" class="logo">
+	  </div>
+  
+	  <div class="form-container">
+		<label for="uname" class="user-pass"><b>Username</b></label>
+		<input type="text" placeholder="Enter Username" name="uname" required>
+  
+		<label for="psw" class="user-pass"><b>Password</b></label>
+		<input type="password" placeholder="Enter Password" name="psw" required>
+		  
+		<div class="login-alignment">
+		  <button class="login-form" type="submit">LOGIN</button>
+		  <label class="remember-me">
+			  <input type="checkbox" checked="checked" name="remember"> Remember me
+		  </label>
+		</div>
+		<span class="psw">Forgot <a href="#">password?</a></span>
+	  </div>
+	</form>
+  </div>
+  
+  <!--REGISTER FORM POP-UP-->
+<div id="id02" class="modal">
+  
+	<form class="modal-content2 animate" action="/register.php" method="post">
+	  <div class="imgcontainer">
+		<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+		<img src="../img/logo.png" alt="Logo" class="logo">
+	  </div>
+  
+	  <div class="form-container">
+
+		<label for="uname"><b>Username</b></label>
+		<input type="text" placeholder="Create Username" name="uname" required></br></br>
+
+		<label for="fname"><b>First Name</b></label>
+		<input type="text" placeholder="Enter Your First Name" name="fname" required></br></br>
+
+		<label for="lname"><b>Last Name</b></label>
+		<input type="text" placeholder="Enter Your Last Name" name="lname" required></br></br>
+
+		<label for="email"><b>Email</b></label>
+		<input type="text" placeholder="Enter Email" name="email" required></br></br>
+
+		<label for="phone"><b>Phone Number</b></label>
+		<input type="text" placeholder="Enter Phone Number" name="phone" required></br></br>
+  
+		<label for="psw"><b>Password</b></label>
+		<input type="password" placeholder="Create Password" name="psw" required></br></br>
+
+		<h4>Are You an Employee for Nuts & Bolts?</h4>
+		<input type="radio" name="choice-yes-or-no" id="choice-yes" required>
+		<label class="yes-or-no" for="choice-yes">YES</label>
+		<div class="reveal-if-active">
+			<label for="employeeID">Please Enter Your Verification Code</label>
+			<input type="text" id="employeeID" name="employeeID?" class="require-if-active" data-require-pair="#choice-yes">
+		</div>
+		<input type="radio" name="choice-yes-or-no" id="choice-no">
+		<label class="yes-or-no" for="choice-no">NO</label>
+
+		  
+		<div class="login-alignment">
+		  <button onclick=showAlert() class="login-form" type="submit">Register</button>
+		</div>
+	  </div>
+	</form>
+
+
+
+<!--SCRIPT FOR POP-UP FORM ANIMATION-->
+<script type="text/javascript">
+	// Popup window code
+	function newPopup(url) {
+		popupWindow = window.open(
+			url,'popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+	}
+	
+	// Get the modal
+	var modal = document.getElementById('id01');
+	var modal2 = document.getElementById('id02');
+	
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		} else if (event.target == modal2) {
+			modal2.style.display = "none";
+		}
+	}
+
+	function showAlert() {
+    alert ("You're registered!");
+  }
+</script>
+
+
+
+
 </body>
 </html>

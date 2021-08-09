@@ -76,14 +76,13 @@ nav ul {
 	border-color: #f0ece8;
 	border-width: 5px;
 	border-radius: 5px;
-	width: 1700px;
+	width: 1900px;
 	margin-top: 30px;
 	margin-bottom: 200px;
 	margin-left: auto;
 	margin-right: auto;
-	height: 2700px;
+	height: 2200px;
 	box-shadow: inset 0px 0px 200px 1px #eedfd1, 0px 50px 60px black;
-	padding: 80px;
 }
 
  .cf:before, .cf:after {
@@ -100,7 +99,7 @@ nav ul {
 	 width: 75%;
 	 max-width: 1500px;
 	 margin: 0 auto;
-	 padding: 5% 0;
+	 /* padding: 5% 0; */
 	 margin-bottom: 5em;
 }
  .projTitle {
@@ -108,7 +107,7 @@ nav ul {
 	 font-weight: bold;
 	 text-align: center;
 	 font-size: 2em;
-	 padding: 1em 0;
+	 /* padding: 1em 0; */
 	 border-bottom: 1px solid #dadada;
 	 letter-spacing: 3px;
 	 text-transform: uppercase;
@@ -120,9 +119,10 @@ nav ul {
 	 text-transform: lowercase;
 	 color: #777;
 }
- .heading {
-	 padding: 1em 0;
+ .my-cart {
+	 padding: 0.5em 0;
 	 border-bottom: 1px solid #d0d0d0;
+	 text-align: center;
 }
  .heading h1 {
 	 font-size: 2em;
@@ -177,18 +177,15 @@ nav ul {
  .tableHead li.prodHeader {
 	 text-align: left;
 }
- .cart {
-	 padding: 1em 0;
-}
  .cart .items {
 	 display: block;
 	 width: 100%;
 	 /* vertical-align: middle; */
-	 padding: 1.5em;
+	 padding: 1em;
 	 border-bottom: 1px solid #fafafa;
 }
  .cart .items.even {
-	 background: #fafafa;
+	 background: #ece6df;
 }
  .cart .items .infoWrap {
 	 display: table;
@@ -199,12 +196,12 @@ nav ul {
 	 vertical-align: middle;
 }
  .cart .items .cartSection .itemNumber {
-	 font-size: 0.75em;
+	 font-size: 0.50em;
 	 color: #777;
 	 margin-bottom: 0.5em;
 }
  .cart .items .cartSection h3 {
-	 font-size: 1em;
+	 font-size: 1.2em;
 	 font-family: "Montserrat", sans-serif;
 	 font-weight: bold;
 	 text-transform: uppercase;
@@ -212,7 +209,7 @@ nav ul {
 }
  .cart .items .cartSection p {
 	 display: inline-block;
-	 font-size: 0.85em;
+	 font-size: 0.55em;
 	 color: #777;
 	 font-family: "Montserrat", sans-serif;
 }
@@ -238,7 +235,7 @@ nav ul {
 }
  .cart .items .cartSection.qtyWrap p, .cart .items .cartSection.prodTotal p {
 	 font-weight: bold;
-	 font-size: 1.25em;
+	 font-size: 0.9em;
 }
  .cart .items .cartSection input.qty {
 	 width: 2em;
@@ -372,6 +369,7 @@ nav ul {
  .subtotal .totalRow {
 	 padding: 0.5em;
 	 text-align: right;
+	 list-style: none;
 }
  .subtotal .totalRow.final {
 	 font-size: 1.25em;
